@@ -6,7 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        "normundaKrasa": "#667788"
+        "my-gray": "#393E46",
+        "my-light": "#EEEEEE",
+        "my-cyan": "#00ADB5",
+        "my-dark": "222831",
       },
     },
   },
