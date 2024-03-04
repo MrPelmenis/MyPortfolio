@@ -3,36 +3,28 @@ import './Page.css';
 function Page() {
     const containerRef = useRef(null);
     
+    //https://legacy.reactjs.org/docs/context.html
+
+    //learning refs
     useEffect(() => {
-        const interval = setInterval(() => {
-          if (containerRef.current) {
-            const maxScrollAmount = containerRef.current.scrollWidth - containerRef.current.clientWidth;
-            if(containerRef.current.scrollLeft >= maxScrollAmount){
-                containerRef.current.scrollLeft -= maxScrollAmount / 2;
-            }else{
-                containerRef.current.scrollLeft += maxScrollAmount / 2;
-            }
-           
-          }
-        }, 1000);
-    
-        return () => clearInterval(interval);
+      containerRef.current.style.scrollBehavior = 'smooth';
     }, []);
   
+  
   return (
-    <div ref={containerRef} className='h-full opacity-50 flex flex-row overflow-x-hidden'>
-            <ScrollElement text="a"></ScrollElement>
-            <ScrollElement text="b"></ScrollElement>
-            <ScrollElement text="c"></ScrollElement>
+    <div ref={containerRef} className='h-full opacity-50 flex flex-row overflow-x-hidden '>
+            <ScrollElement id="home"  text="Home" nextSec="2"></ScrollElement>
+            <ScrollElement id="about" text="About" nextSec="3"></ScrollElement>
+            <ScrollElement id="projects" text="Projects" nextSec="1"></ScrollElement>
     </div>
   )
 }
 
 function ScrollElement(props){
     return(
-        <div className='h-full w-full bg-slate-500 flex-shrink-0 flex-grow-0 scrollable-container hiddenScrollBar'>
+        <a href={"#section" + props.nextSec}  id={props.id} className='h-full w-full bg-slate-500 flex-shrink-0 flex-grow-0 scrollable-container hiddenScrollBar'>
             {props.text}
-        </div>
+        </a>
     )
 }
 
