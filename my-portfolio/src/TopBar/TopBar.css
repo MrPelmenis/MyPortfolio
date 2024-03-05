@@ -1,11 +1,19 @@
 a.sizeOnHover {
     transition: transform 100ms;
-    transform-origin: bottom;
 }
   
 a.sizeOnHover:hover {
     display:inline-block;
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -ms-transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+
+.coolFont{
+  font-family: 'Arial';
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #222831;
+  line-break: strict;
 }

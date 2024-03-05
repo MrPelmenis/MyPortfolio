@@ -12,7 +12,7 @@ function Page() {
   
   
   return (
-    <div ref={containerRef} className='h-full opacity-50 flex flex-row overflow-x-hidden '>
+    <div ref={containerRef} className='h-full flex flex-row overflow-x-hidden bg-my-light rounded-lg'>
             <ScrollElement id="home"  text="Home" nextSec="2"></ScrollElement>
             <ScrollElement id="about" text="About" nextSec="3"></ScrollElement>
             <ScrollElement id="projects" text="Projects" nextSec="1"></ScrollElement>
@@ -22,7 +22,7 @@ function Page() {
 
 function ScrollElement(props){
     return(
-        <a href={"#section" + props.nextSec}  id={props.id} className='h-full w-full bg-slate-500 flex-shrink-0 flex-grow-0 scrollable-container hiddenScrollBar'>
+        <a href={"#section" + props.nextSec}  id={props.id} className='h-full w-full flex-shrink-0 flex-grow-0 scrollable-container hiddenScrollBar'>
             {props.text}
         </a>
     )

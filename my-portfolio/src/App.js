@@ -8,7 +8,7 @@ function App() {
 
   return (
         <section className="h-screen w-screen bg-my-gray flex justify-center items-center">
-          <div className='bg-my-light h-1/2 w-1/2 rounded-xl flex flex-col justify-between slideIn border-b-4 border-r-4 border-gray-800'>
+          <div className='bg-my-light h-3/4 w-full sm:w-3/4 rounded-xl flex flex-col justify-between slideIn border-b-4 border-r-4 border-gray-800'>
               <TopBar></TopBar>
               <Page></Page>
           </div>
