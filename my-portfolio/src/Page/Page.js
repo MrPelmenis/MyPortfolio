@@ -20,6 +20,7 @@ function Page() {
   )
 }
 
+
 function ScrollElement(props){
     return(
         <a href={"#section" + props.nextSec}  id={props.id} className='h-full w-full flex-shrink-0 flex-grow-0 scrollable-container hiddenScrollBar'>
