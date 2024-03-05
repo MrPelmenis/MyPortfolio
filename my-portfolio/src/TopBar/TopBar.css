@@ -3,10 +3,8 @@ a.sizeOnHover {
 }
   
 a.sizeOnHover:hover {
-    display:inline-block;
-    -ms-transform: translateY(-3px);
-    -webkit-transform: translateY(-3px);
-    transform: translateY(-3px);
+    position: relative;
+    top: -3px;
 }
 
 .coolFont{

@@ -55,6 +55,7 @@ function TopBar() {
       <div className='h-20 w-full rounded-lg flex justify-between items-center bg-my-light' >
           <span className='mx-6 md:mx-3 lg:mg-6 xl:mx-6 text-xl md:text-xl lg:text-2xl xl:text-3xl coolFont'>Normunds Malnačs</span>
           <NavigatorButtons></NavigatorButtons>
+          <div className='hidden md:block'>Nu kkas seit arii var but</div>
       </div>
     );
 }
