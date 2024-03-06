@@ -1,5 +1,5 @@
 a.sizeOnHover {
-    transition: transform 100ms;
+    transition: transform 300ms, top 3000ms;
 }
   
 a.sizeOnHover:hover {
