@@ -10,9 +10,38 @@
     75% { transform: translateX(-1px); }
     100% { transform: translateX(0); }
 }
-  
+
 .shake:hover {
     animation: shake 0.3s ease-in-out;
+}
+
+.languageWidget{
+    transition: 100ms;
+}
+
+.languageWidget:hover{
+    background-color: grey; 
+}
+
+.projectShowcase {
+    transition: 300ms;
+    transform-origin: top;
+}
+
+@keyframes appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.projectShowcase:hover .slowAppearingText {
+    animation: appear 300ms ease forwards;
+}
+
+.slowAppearingText {
+    opacity: 0;
+}
+
+.projectShowcase:hover{
 }
 
 .hiddenScrollBar {
