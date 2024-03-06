@@ -11,12 +11,12 @@
 }
 
 .languageWidget{
-    transition: 100ms;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .languageWidget:hover{
-    background-color: rgb(49, 49, 49); 
-    color: rgb(207, 207, 207);
+    background-color: #727272;
+    color: #eee;
 }
 
 .projectShowcase {

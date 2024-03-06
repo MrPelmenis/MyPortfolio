@@ -4,7 +4,7 @@ import './Page.css';
 
 import homeImage from "../img/image.png";
 import phpLogo from "../img/phpLogo.png";
-
+import boidsImg from "../img/boids.png";
 
 function Page() {
     const containerRef = useRef(null);
@@ -60,7 +60,7 @@ function ProjectsPage(){
       
       <h1 className='font-bold mt-5 ml-5 md:text-xl lg:text-2xl xl:text-3xl'>My personal projects:</h1>
       <section className='flex flex-wrap overflow-y-auto h-full justify-center mt-3'>
-        <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase img={boidsImg} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
@@ -81,10 +81,12 @@ function ProjectsPage(){
 
 function ProjectShowcase(props){
     const [isHovered, setIsHovered] = useState(false);
+    
+
     return(
         <span 
-            className={`flex flex-col items-center text-center border mx-2 mt-5 border-black overflow-hidden projectShowcase ${isHovered ? 'hover:scale-110' : ''}`} 
-            style={{width: isHovered ? '200px' : '200px', height: isHovered ? '200px' : '150px', marginBottom: isHovered ? "10px": "0"}} 
+            className={`flex flex-col items-center text-center  mx-2 mt-5 border-black overflow-hidden projectShowcase ${isHovered ? 'hover:scale-110' : ''}`} 
+            style={{width: isHovered ? '200px' : '200px', height: isHovered ? '200px' : '150px', marginBottom: isHovered ? "10px": "0"}}
             onMouseEnter={() => {
               setIsHovered(true);
             }} 
