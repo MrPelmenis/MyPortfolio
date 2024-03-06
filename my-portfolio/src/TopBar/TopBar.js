@@ -24,7 +24,7 @@ function TopBar() {
   
     const NavigatorButtons = ()=> {
       return (
-        <span className='mx-6 md:mx-3 lg:mg-6 xl:mx-9 select-none'>
+        <span className='mx-6 md:mx-3 lg:mg-6 xl:mx-9 select-none text-xl md:text-xl lg:text-2xl xl:text-3xl'>
           <a href='#home' className='mx-2 sizeOnHover' onClick={()=>changeToggleButtons("home")} style={{borderBottom: toggledButtons.home ? "1px solid black" : ""}}>Home</a>
           <a href='#about' className='mx-2 sizeOnHover' onClick={()=>changeToggleButtons("about")} style={{borderBottom: toggledButtons.about ? "1px solid black" : ""}}>About</a>
           <a href='#projects' className='mx-2 sizeOnHover' onClick={()=>changeToggleButtons("projects")} style={{borderBottom: toggledButtons.projects ? "1px solid black" : ""}}>Projects</a>
@@ -55,9 +55,9 @@ function TopBar() {
   
     return (
       <div className='h-20 w-full rounded-lg flex justify-between items-center bg-my-light' >
-          <span className='mx-6 md:mx-3 lg:mg-6 xl:mx-6 text-xl md:text-xl lg:text-2xl xl:text-3xl coolFont'>Jāāānis Ceeeeplis</span>
+          <span className='mx-6 md:mx-3 lg:mg-6 xl:mx-6 text-2xl md:text-2xl lg:text-3xl xl:text-4xl coolFont'>Jāāānis Ceeeeplis</span>
           <NavigatorButtons></NavigatorButtons>
-          <div className='hidden md:block'>Nu kkas seit arii var but</div>
+          <div className='hidden md:block text-xl md:text-xl lg:text-2xl xl:text-3xl'>Nu kkas seit arii var but</div>
       </div>
     );
 }

@@ -18,7 +18,7 @@ function Page() {
   
   
   return (
-    <div ref={containerRef} className='h-full flex flex-row overflow-x-hidden bg-my-light rounded-lg'>
+    <div ref={containerRef} className='h-full flex flex-row overflow-x-hidden bg-my-light rounded-lg overflow-hidden'>
             <HomePage></HomePage>
             <AboutPage></AboutPage>
             <ProjectsPage></ProjectsPage>
@@ -29,9 +29,9 @@ function Page() {
 
 function HomePage() {
   return (
-    <section id='home' className='w-full h-full flex justify-between flex-shrink-0'>
-      <img style={{width:200, height:200}} className='mx-6 mt-5 shake' src={homeImage} alt="Home Image" />
-      <div className='mt-5'>Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.
+    <section id='home' className='w-full h-full flex justify-between flex-shrink-0 items-center'>
+      <img className='mx-6 mb-20 h-48 md:h-64 lg:h-72 xl:h-80 shake' src={homeImage} alt="Home Image" />
+      <div className='md:text-lg mb-20 lg:text-xl xl:text-2xl'>Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.
           Received shutters expenses ye he pleasant. Drift as blind above at up. No up simple county stairs do should praise as. Drawings sir gay together landlord had law smallest. Formerly welcomed attended declared met say unlocked. Jennings outlived no dwelling denoting in peculiar as he believed. Behaviour excellent middleton be as it curiosity departure ourselves. </div>
     </section>
   );
@@ -40,26 +40,39 @@ function HomePage() {
 
 function AboutPage() {
   return (
-    <section id='about' className='w-full h-full flex flex-col flex-shrink-0'>
-      <h1 className='font-bold mx-3 mt-5'>Education:</h1>
-      <div className='mx-3'>Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.</div>
-      <h1 className='font-bold mx-3'>IT Knowledge:</h1>
-      <div className='mx-3'>Fujak es ahujennais it fujaks</div>
-      <div className='turuWidgetus'><LanguageShowcase img={phpLogo} text="php"></LanguageShowcase></div>
+    <section id='about' className='w-full h-full flex flex-col flex-shrink-0 items-left justify-center'>
+      <h1 className='font-bold mx-3 md:text-xl lg:text-2xl xl:text-3xl'>Education:</h1>
+      <div className='mx-3 md:text-lg lg:text-xl xl:text-2xl '>Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.</div>
+      <h1 className='font-bold mx-3 md:text-xl lg:text-2xl xl:text-3xl mt-5'>IT Knowledge:</h1>
+      <div className='mx-3 md:text-lg lg:text-xl xl:text-2xl mb-1'>Fujak es ahujennais it fujaks</div>
+      <div className='turuWidgetus mb-20'>
+        <LanguageShowcase img={phpLogo} text="php"></LanguageShowcase>
+        <LanguageShowcase img={phpLogo} text="php"></LanguageShowcase>
+        <LanguageShowcase img={phpLogo} text="php"></LanguageShowcase>
+      </div>
    </section>
   );
 }
 
 function ProjectsPage(){
   return (
-    <section id='projects' className='w-full h-full flex-shrink-0'>
-      <h1 className='font-bold mt-5 ml-3'>My personal projects:</h1>
+    <section id='projects' className='w-full h-full flex-shrink-0' >
       
-      <section className='flex flex-wrap h-full justify-center overflow-auto mt-3'>
+      <h1 className='font-bold mt-5 ml-5 md:text-xl lg:text-2xl xl:text-3xl'>My personal projects:</h1>
+      <section className='flex flex-wrap overflow-y-auto h-full justify-center mt-3'>
         <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <div className='w-full' style={{height:100}}></div>
       </section>
       
     </section>
@@ -68,11 +81,10 @@ function ProjectsPage(){
 
 function ProjectShowcase(props){
     const [isHovered, setIsHovered] = useState(false);
-
     return(
         <span 
-            className={`flex flex-col  text-center border mx-2 mt-5 border-black overflow-hidden projectShowcase ${isHovered ? 'hover:scale-110' : ''}`} 
-            style={{width: isHovered ? '200px' : '200px', height: isHovered ? '200px' : '150px'}} 
+            className={`flex flex-col items-center text-center border mx-2 mt-5 border-black overflow-hidden projectShowcase ${isHovered ? 'hover:scale-110' : ''}`} 
+            style={{width: isHovered ? '200px' : '200px', height: isHovered ? '200px' : '150px', marginBottom: isHovered ? "10px": "0"}} 
             onMouseEnter={() => {
               setIsHovered(true);
             }} 
@@ -95,13 +107,5 @@ function LanguageShowcase(props){
   )
 }
 
-
-function ScrollElement(props){
-    return(
-        <a href={"#section" + props.nextSec}  id={props.id} className='h-full w-full flex-shrink-0 flex-grow-0 scrollable-container hiddenScrollBar'>
-            {props.text}
-        </a>
-    )
-}
 
 export default Page;

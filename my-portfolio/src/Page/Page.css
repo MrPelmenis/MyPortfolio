@@ -1,8 +1,3 @@
-.hiddenScrollBar::-webkit-scrollbar {
-    
-}
-  
-
 @keyframes shake {
     0% { transform: translateX(0); }
     25% { transform: translateX(-2px); }
@@ -20,7 +15,8 @@
 }
 
 .languageWidget:hover{
-    background-color: grey; 
+    background-color: rgb(49, 49, 49); 
+    color: rgb(207, 207, 207);
 }
 
 .projectShowcase {
@@ -39,14 +35,4 @@
 
 .slowAppearingText {
     opacity: 0;
-}
-
-.projectShowcase:hover{
-}
-
-.hiddenScrollBar {
-}
-
-.customScroll{
-
 }
