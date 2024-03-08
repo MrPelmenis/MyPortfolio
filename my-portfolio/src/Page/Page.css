@@ -6,6 +6,10 @@
     100% { transform: translateX(0); }
 }
 
+.overflow-wrap {
+    overflow-wrap: break-word;
+}
+
 .shake:hover {
     animation: shake 0.3s ease-in-out;
 }
@@ -15,8 +19,7 @@
 }
 
 .languageWidget:hover{
-    background-color: #727272;
-    color: #eee;
+    background-color: #ececec;
 }
 
 .projectShowcase {
@@ -35,4 +38,26 @@
 
 .slowAppearingText {
     opacity: 0;
+}
+
+
+.appear {
+    opacity: 0;
+    height: 0;
+}
+
+.show-appear:hover .appear {
+    animation: appear 500ms ease forwards;
+}
+
+
+@keyframes appearAnimation {
+    0% {
+        opacity: 0;
+        height: 0; 
+        }
+    100% {
+        opacity: 1;
+        height: 120%;
+    }
 }

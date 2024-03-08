@@ -6,6 +6,8 @@ import homeImage from "../img/image.png";
 import phpLogo from "../img/phpLogo.png";
 import boidsImg from "../img/boids.png";
 
+import { MdLocalPhone } from "react-icons/md";
+
 function Page() {
     const containerRef = useRef(null);
     
@@ -29,11 +31,23 @@ function Page() {
 
 function HomePage() {
   return (
-    <section id='home' className='w-full h-full flex justify-between flex-shrink-0 items-center'>
-      <img className='mx-6 mb-20 h-48 md:h-64 lg:h-72 xl:h-80 shake' src={homeImage} alt="Home Image" />
-      <div className='md:text-lg mb-20 lg:text-xl xl:text-2xl'>Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.
-          Received shutters expenses ye he pleasant. Drift as blind above at up. No up simple county stairs do should praise as. Drawings sir gay together landlord had law smallest. Formerly welcomed attended declared met say unlocked. Jennings outlived no dwelling denoting in peculiar as he believed. Behaviour excellent middleton be as it curiosity departure ourselves. </div>
-    </section>
+    <section id='home' className='w-full h-full flex justify-between overflow-hidden flex-shrink-0 items-center'>
+      <img className='mx-6 h-48 md:h-64 lg:h-72 xl:h-80 shake' src={homeImage} alt="Home Image" />
+      <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full md:max-w-3/4 lg:max-w-2/3 xl:max-w-1/2 h-full overflow-y-auto' style={{paddingBottom:"60px"}}>
+        Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.
+        Received shutters expenses ye he pleasant. Drift as blind above at up. No up simple county stairs do should praise as. Drawings sir gay together landlord had law smallest. Formerly welcomed attended declared met say unlocked. Jennings outlived no dwelling denoting in peculiar as he believed. Behaviour excellent middleton be as it curiosity departure ourselves.
+       
+        <div className='bg-my-cyan w-40 text-center rounded-full flex flex-col show-appear'>
+          <div className="flex justify-center items-center">
+              <span className="contact-text select-none">Contact me</span>
+          </div>
+          <div className='appear flex justify-start items-center'>
+              <MdLocalPhone></MdLocalPhone>
+              25299736
+          </div>
+        </div>
+      </div>
+  </section>
   );
 }
 
@@ -58,8 +72,8 @@ function ProjectsPage(){
   return (
     <section id='projects' className='w-full h-full flex-shrink-0' >
       
-      <h1 className='font-bold mt-5 ml-5 md:text-xl lg:text-2xl xl:text-3xl'>My personal projects:</h1>
-      <section className='flex flex-wrap overflow-y-auto h-full justify-center mt-3'>
+      <h1 className='font-bold mt-5 ml-5 md:text-lg lg:text-xl xl:text-2xl'>My personal projects:</h1>
+      <section className='flex flex-wrap overflow-y-auto h-full justify-center mt-3' style={{paddingBottom:"60px"}}>
         <ProjectShowcase img={boidsImg} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={phpLogo} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
@@ -81,7 +95,7 @@ function ProjectsPage(){
 
 function ProjectShowcase(props){
     const [isHovered, setIsHovered] = useState(false);
-    
+
 
     return(
         <span 
