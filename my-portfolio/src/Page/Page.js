@@ -61,11 +61,11 @@ function Page() {
 function HomePage() {
  
   return (
-    <section id='home' className='w-full h-full flex justify-between overflow-hidden flex-shrink-0 flex-col items-center sm:flex-col md:flex-col lg:flex-row xl:flex-row'>
+    <section id='home' className='w-full h-full flex overflow-hidden flex-shrink-0 flex-col items-center sm:flex-col md:flex-col lg:flex-row xl:flex-row'>
       <img className='mx-6 h-48 md:h-auto lg:h-auto xl:h-auto shake' src={homeImage} alt="Home Image" />
-      <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full md:max-w-3/4 lg:max-w-2/3 xl:max-w-1/2 h-full overflow-y-auto flex flex-col justify-center items-center' style={{paddingBottom:"90px", padding:"20px"}}>
+      <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full md:max-w-3/4 lg:max-w-2/3 xl:max-w-1/2 min-h-full overflow-y-auto flex flex-col justify-center items-center'>
         Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.
-        Received shutters expenses ye he pleasant. Drift as blind above at up. No up simple county stairs do should praise as. Drawings sir gay together landlord had law smallest. Formerly welcomed attended declared met say unlocked. Jennings outlived no dwelling denoting in peculiar as he believed. Behaviour excellent middleton be as it curiosity departure ourselves.
+
         <div className='flex flex-wrap justify-center'>
           <ContactMe></ContactMe>
           <GithubDisplay></GithubDisplay>  
@@ -173,26 +173,25 @@ function ProjectsPage(){
   return (
     <section id='projects' className='w-full h-full flex-shrink-0 flex flex-col' >
       
-      <h1 className='font-bold mt-5 ml-5 md:text-lg lg:text-xl xl:text-2xl'>My personal projects:</h1>
-      <section className='flex flex-wrap overflow-y-auto h-full justify-center mt-3' style={{paddingBottom:"60px"}}>
-        <ProjectShowcase img={naggersImg} title={"Full Stack Website"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        
-        <ProjectShowcase img={beatMakerImg} title={"Beat Maker Web"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-
-        <ProjectShowcase img={asteroidGameImg} title={"Retro Asteroid Game"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase img={epicKillingGame} title={"Crimsonland Alternative"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase img={tankGame} title={"Online Multiplayer Game"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase img={bird} title={"Flappy Bird Remake"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-
+     
+      <section className='flex flex-wrap overflow-y-auto h-full justify-center mt-10' style={{paddingBottom:"60px"}}>
+      <div className='w-full'> <h1 className='font-bold mt-5 ml-5 md:text-xl lg:text-2xl xl:text-3xl'>My Personal Live Projects:</h1></div>
+        <ProjectShowcase href={"https://naggers.sytes.net/"} img={naggersImg} title={"Full Stack Website"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase href={"https://thetankgame.azurewebsites.net/"} img={tankGame} title={"Online Multiplayer Tank Game"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase href={"https://purse.blob.core.windows.net/epic-killing-game/index.html"} img={epicKillingGame} title={"Crimsonland Alternative"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase  href={"https://nomunakaste.blob.core.windows.net/bitmachine/index.html"} img={beatMakerImg} title={"Beat Maker Web"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase href={"https://nomunakaste.blob.core.windows.net/asteroidgame/start.html"} img={asteroidGameImg} title={"Retro Asteroid Game"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+      
+      <div className='w-full'> <h1 className='font-bold mt-5 ml-5 md:text-xl lg:text-2xl xl:text-3xl'>Others:</h1></div>
         <ProjectShowcase img={game2048} title={"2048 Alternative"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase img={gameofLife} title={"Conway's Game Of Life"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        
+        <ProjectShowcase img={gameofLife} title={"Conway's Game Of Life Remake"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={imgtoTxt} title={"Image To Text Converter"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-
         <ProjectShowcase img={threeDterrain} title={"3D Terrain Generation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={maze} title={"3D Maze Generation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
         <ProjectShowcase img={boidsImg} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <div className='w-full' style={{height:100}}></div>
+        <ProjectShowcase img={bird} title={"Flappy Bird Remake"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+      
+      <div className='w-full' style={{height:50}}></div>
       </section>
       
     </section>
@@ -204,18 +203,22 @@ function ProjectShowcase(props){
 
 
     return(
+      <a href={props.href}>
         <span 
             className={`flex flex-col items-center text-center  mx-2 mt-5 border-black overflow-hidden projectShowcase ${isHovered ? 'hover:scale-110' : ''}`} 
-            style={{width: isHovered ? '250px' : '200px', height: isHovered ? '200px' : '150px', marginBottom: isHovered ? "10px": "0"}}
+            style={{width: isHovered ? '300px' : '250px', height: isHovered ? '250px' : '200px', marginBottom: isHovered ? "10px": "0"}}
             onMouseEnter={() => {
               setIsHovered(true);
             }} 
             onMouseLeave={() => setIsHovered(false)}>
 
-              <img src={props.img} className="mx-auto mt-0 projectImage"  alt="Project Image" />
-              <h1 className='font-bold'>{props.title}</h1>
+            <div style={{width: '150px', height: '150px', overflow: 'hidden'}}>
+                <img src={props.img} className="mx-auto mt-0" style={{width: '100%', height: '100%', objectFit: 'cover'}} alt="Project Image" />
+            </div>
+              <h1 className='font-bold' style={{textDecoration: props.href ? "underline": ""}}>{props.title}</h1>
               <span className={`slowAppearingText`}>{props.text}</span>
         </span>
+      </a>
     )
 
 }
