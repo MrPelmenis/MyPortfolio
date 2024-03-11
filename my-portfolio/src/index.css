@@ -6,6 +6,8 @@
 body{
   margin: 0;
   overflow-y: hidden;
+  overflow: hidden;
+  background-color: #393E46;
 }
 
 
