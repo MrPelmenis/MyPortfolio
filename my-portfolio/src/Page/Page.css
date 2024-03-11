@@ -38,6 +38,7 @@
 
 .slowAppearingText {
     opacity: 0;
+    transform-origin: top;
 }
 
 

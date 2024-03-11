@@ -6,6 +6,7 @@ import homeImage from "../img/image.png";
 import phpLogo from "../img/phpLogo.png";
 import boidsImg from "../img/boids.png";
 
+import { MdEmail } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
 
 function Page() {
@@ -30,22 +31,28 @@ function Page() {
 
 
 function HomePage() {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <section id='home' className='w-full h-full flex justify-between overflow-hidden flex-shrink-0 items-center'>
-      <img className='mx-6 h-48 md:h-64 lg:h-72 xl:h-80 shake' src={homeImage} alt="Home Image" />
+      <img className='mx-6 h-48 md:h-64 lg:h-72 xl:h-80 md:w-50 lg:w-72 xl:w-80 sm:w-30 shake' src={homeImage} alt="Home Image" />
       <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full md:max-w-3/4 lg:max-w-2/3 xl:max-w-1/2 h-full overflow-y-auto' style={{paddingBottom:"60px"}}>
         Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.
         Received shutters expenses ye he pleasant. Drift as blind above at up. No up simple county stairs do should praise as. Drawings sir gay together landlord had law smallest. Formerly welcomed attended declared met say unlocked. Jennings outlived no dwelling denoting in peculiar as he believed. Behaviour excellent middleton be as it curiosity departure ourselves.
        
-        <div className='bg-my-cyan w-40 text-center rounded-full flex flex-col show-appear'>
-          <div className="flex justify-center items-center">
-              <span className="contact-text select-none">Contact me</span>
-          </div>
-          <div className='appear flex justify-start items-center'>
-              <MdLocalPhone></MdLocalPhone>
-              25299736
-          </div>
-        </div>
+          <span
+            className={`flex text-center flex-col items-center mx-2 mt-5 border border-black rounded-lg bg-my-cyan overflow-hidden projectShowcase transition-all duration-300 ${isHovered ? 'hover:scale-110' : ''}`}
+            style={{width: isHovered ? '300px' : '150px', height: isHovered ? '100px' : '30px'}}
+            onMouseEnter={() => {
+                setIsHovered(true);
+            }} 
+            onMouseLeave={() => setIsHovered(false)}>
+
+            <h1 className='font-bold select-none'>Contact Me</h1>
+            <span className="slowAppearingText text-base">
+                <div className='flex justify-center items-center'><MdLocalPhone/>25299736</div>
+                <div className='flex justify-center items-center'><MdEmail/> normundsmalnacs@gmail.com</div>
+            </span>
+        </span>
       </div>
   </section>
   );
