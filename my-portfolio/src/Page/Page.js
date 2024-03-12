@@ -65,7 +65,7 @@ function HomePage() {
       <img className='mx-6 h-48 md:h-auto lg:h-auto xl:h-auto shake' src={homeImage} alt="Home Image" />
       <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full  overflow-y-auto flex flex-col justify-center items-center' style={{paddingBottom:10}}>
         Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.
-        <div className='flex flex-wrap justify-center'>
+        <div className='flex flex-wrap justify-center items-center flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row'>
           <ContactMe></ContactMe>
           <GithubDisplay></GithubDisplay>  
           <Socials></Socials>
