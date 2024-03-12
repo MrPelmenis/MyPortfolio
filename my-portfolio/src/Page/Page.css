@@ -36,6 +36,20 @@
     animation: appear 300ms ease forwards;
 }
 
+.projectShowcase.tapped .slowAppearingText {
+    animation: appear 300ms ease forwards;
+}
+
+
+.testButton{
+    border: 1px solid red;
+}
+
+.testButton:active{
+    background-color: red;
+}
+
+
 
 .slowAppearingText {
     opacity: 0;

@@ -63,9 +63,8 @@ function HomePage() {
   return (
     <section id='home' className='w-full h-full flex overflow-hidden flex-shrink-0 flex-col items-center sm:flex-col md:flex-col lg:flex-row xl:flex-row'>
       <img className='mx-6 h-48 md:h-auto lg:h-auto xl:h-auto shake' src={homeImage} alt="Home Image" />
-      <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full md:max-w-3/4 lg:max-w-2/3 xl:max-w-1/2 min-h-full overflow-y-auto flex flex-col justify-center items-center'>
+      <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full  overflow-y-auto flex flex-col justify-center items-center' style={{paddingBottom:10}}>
         Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.
-
         <div className='flex flex-wrap justify-center'>
           <ContactMe></ContactMe>
           <GithubDisplay></GithubDisplay>  
@@ -77,70 +76,109 @@ function HomePage() {
 }
 
 
-function ContactMe(){
+function ContactMe() {
   const [isHovered, setIsHovered] = useState(false);
-  return(
-  <span
-      className={`flex text-center flex-col items-center mx-3 mt-5 border border-black rounded-lg bg-my-cyan overflow-hidden projectShowcase transition-all duration-300 ${isHovered ? 'hover:scale-110' : ''}`}
-            style={{width: isHovered ? '260px' : '150px', height: isHovered ? '90px' : '30px'}}
-            onMouseEnter={() => {
-                setIsHovered(true);
-            }} 
-            onMouseLeave={() => setIsHovered(false)}>
+  const [isTapped, setIsTapped] = useState(false);
 
-            <h1 className='select-none'>Contact Me</h1>
-            <span className="slowAppearingText text-base">
-                <div className='flex justify-center items-center'><MdLocalPhone className='mx-1'/>25299736</div>
-                <div className='flex justify-center items-center'><MdEmail className='mx-1'/> normundsmalnacs@gmail.com</div>
-            </span> 
-  </span>
-  )
-}
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
 
-function Socials(){
-  const [isHovered, setIsHovered] = useState(false);
-  return(
-  <span
-      className={`flex text-center flex-col items-center mx-3 mt-5 border border-black rounded-lg bg-orange-400 overflow-hidden projectShowcase transition-all duration-300 ${isHovered ? 'hover:scale-110' : ''}`}
-            style={{width: isHovered ? '260px' : '150px', height: isHovered ? '90px' : '30px'}}
-            onMouseEnter={() => {
-                setIsHovered(true);
-            }} 
-            onMouseLeave={() => setIsHovered(false)}>
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
-            <h1 className='select-none'>Socials</h1>
-            <span className="slowAppearingText text-base">
-                <div className='flex justify-center items-center'><FaInstagram className='mx-1'></FaInstagram><a href='https://www.instagram.com/normuns/' className='underlineOnHover'>normuns</a></div>
-                <div className='flex justify-center items-center'><MdFacebook className='mx-1'></MdFacebook> <a href='https://www.facebook.com/normis.malcs/?locale=lv_LV' className='underlineOnHover'>Normunds Malnačs</a></div>
-            </span> 
-  </span>
-  )
-}
+  const handleClick = () => {
+    setIsTapped(!isTapped);
+  };
 
-
-function GithubDisplay(){
-  const [isHovered, setIsHovered] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
-  
   return (
     <span
-      className={`flex text-center flex-col items-center mx-3 mt-5 border border-black rounded-lg bg-purple-600 overflow-hidden projectShowcase transition-all duration-300 ${isHovered || isClicked ? 'hover:scale-110' : ''} ${isClicked ? 'clicked' : ''}`}
-      style={{width: isHovered || isClicked ? '200px' : '150px', height: isHovered || isClicked ? '60px' : '30px'}}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseDown={() => setIsClicked(!isClicked)}
-      onMouseLeave={() => setIsHovered(false)}
+      className={`flex text-center flex-col items-center mx-3 mt-5 border border-black rounded-lg bg-my-cyan overflow-hidden projectShowcase transition-all duration-300 ${isHovered || isTapped ? 'hover:scale-110' : ''} ${isTapped ? 'tapped' : ''}`}
+      style={{ width: isHovered || isTapped ? '260px' : '150px', height: isHovered || isTapped ? '90px' : '30px' }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
-      <h1 className='select-none' style={{color:"white"}}>Github</h1>
+      <h1 className='select-none'>Contact Me</h1>
       <span className="slowAppearingText text-base">
-        <div className='flex justify-center items-center underlineOnHover' style={{color:"white"}}>
-          <a href='https://github.com/MrPelmenis' className='font-bold flex justify-center items-center'>
-            <FaGithub className='mx-1'/> Check out my work
-          </a>
-        </div>
+        <div className='flex justify-center items-center'><MdLocalPhone className='mx-1'/>25299736</div>
+        <div className='flex justify-center items-center'><MdEmail className='mx-1'/> normundsmalnacs@gmail.com</div>
       </span> 
     </span>
   );
- }
+}
+
+function Socials() {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isTapped, setIsTapped] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleClick = () => {
+    setIsTapped(!isTapped);
+  };
+
+  return (
+    <span
+      className={`flex text-center flex-col items-center mx-3 mt-5 border border-black rounded-lg bg-orange-400 overflow-hidden projectShowcase transition-all duration-300 ${isHovered || isTapped ? 'hover:scale-110' : ''} ${isTapped ? 'tapped' : ''} `}
+      style={{ width: isHovered || isTapped ? '260px' : '150px', height: isHovered || isTapped ? '90px' : '30px' }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
+    >
+      <h1 className='select-none'>Socials</h1>
+      <span className="slowAppearingText text-base">
+        <div className='flex justify-center items-center'><FaInstagram className='mx-1'></FaInstagram><a href='https://www.instagram.com/normuns/' className='underlineOnHover'>normuns</a></div>
+        <div className='flex justify-center items-center'><MdFacebook className='mx-1'></MdFacebook> <a href='https://www.facebook.com/normis.malcs/?locale=lv_LV' className='underlineOnHover'>Normunds Malnačs</a></div>
+      </span>
+    </span>
+  );
+}
+
+
+
+function GithubDisplay() {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleMouseDown = () => {
+    setIsClicked(!isClicked);
+  };
+
+  return (
+    <span
+      className={`flex text-center flex-col items-center mx-3 mt-5 border border-black rounded-lg bg-purple-600 overflow-hidden projectShowcase transition-all duration-300 ${isHovered || isClicked ? 'hover:scale-110' : ''} ${isClicked ? 'tapped' : ''}`}
+      style={{ width: isHovered || isClicked ? '200px' : '150px', height: isHovered || isClicked ? '60px' : '30px' }}
+      onMouseEnter={handleMouseEnter}
+      onMouseDown={handleMouseDown}
+      onMouseLeave={handleMouseLeave}
+    >
+      <h1 className='select-none' style={{ color: "white" }}>Github</h1>
+      <span className="slowAppearingText text-base">
+        <div className='flex justify-center items-center underlineOnHover' style={{ color: "white" }}>
+          <a href='https://github.com/MrPelmenis' className='font-bold flex justify-center items-center'>
+            <FaGithub className='mx-1' /> Check out my work
+          </a>
+        </div>
+      </span>
+    </span>
+  );
+}
 
 
 function AboutPage() {
@@ -198,31 +236,38 @@ function ProjectsPage(){
   )
 }
 
-function ProjectShowcase(props){
-    const [isHovered, setIsHovered] = useState(false);
+function ProjectShowcase(props) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isTapped, setIsTapped] = useState(false);
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
 
-    return(
-      <a href={props.href}>
-        <span 
-            className={`flex flex-col items-center text-center  mx-2 mt-5 border-black overflow-hidden projectShowcase ${isHovered ? 'hover:scale-110' : ''}`} 
-            style={{width: isHovered ? '300px' : '250px', height: isHovered ? '250px' : '200px', marginBottom: isHovered ? "10px": "0"}}
-            onMouseEnter={() => {
-              setIsHovered(true);
-            }} 
-            onMouseLeave={() => setIsHovered(false)}>
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
-            <div style={{width: '150px', height: '150px', overflow: 'hidden'}}>
-                <img src={props.img} className="mx-auto mt-0" style={{width: '100%', height: '100%', objectFit: 'cover'}} alt="Project Image" />
-            </div>
-              <h1 className='font-bold' style={{textDecoration: props.href ? "underline": ""}}>{props.title}</h1>
-              <span className={`slowAppearingText`}>{props.text}</span>
-        </span>
-      </a>
-    )
+  const handleClick = () => {
+    setIsTapped(!isTapped);
+  };
 
+  return (
+    <span
+      className={`flex flex-col items-center text-center mx-2 mt-5 border-black overflow-hidden projectShowcase ${isHovered ? 'hover:scale-110' : ''} ${isTapped ? 'tapped' : ''}`}
+      style={{ width: isHovered || isTapped ? '300px' : '250px', height: isHovered || isTapped ? '300px' : '250px', marginBottom: isHovered || isTapped ? "10px" : "0" }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
+    >
+      <div style={{ width: '150px', height: '150px', overflow: 'hidden' }}>
+        <img src={props.img} className="mx-auto mt-0" style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Project Image" />
+      </div>
+      <a href={props.href}><h1 className='font-bold' style={{ textDecoration: props.href ? "underline" : "" }}>{props.title}</h1></a>
+      <span className={`slowAppearingText`}>{props.text}</span>
+    </span>
+  );
 }
-
 function LanguageShowcase(props){
   return (
     <span className='ml-2 inline-flex rounded-full bord border select-none border-black items-center justify-between languageWidget'>
