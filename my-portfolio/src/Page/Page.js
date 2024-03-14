@@ -61,11 +61,12 @@ function Page() {
 }
 
 
+
 function HomePage() {
   return (
     <section id='home' className='w-full h-full flex  flex-shrink-0 flex-col overflow-y-scroll items-center sm:flex-col md:flex-col lg:flex-row xl:flex-row'>
         <img className='mx-6 h-auto  lg:h-auto xl:h-auto shake' src={homeImage} alt="Home Image" />
-        <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full overflow-visible flex flex-col items-center mt-5 lg:justify-center xl:justify-center' style={{minHeight: "100%"}}>
+        <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full overflow-visible flex flex-col items-center mt-5 lg:justify-center xl:justify-center' style={{minHeight: "100%", paddingBottom: "40px"}}>
             <p>Hello!<br/> I'm Normunds, an IT enthusiast. I've been studying programming for the past 6-7 years and have created many projects along the way. I am continuously sharpening my skills and knowledge to excel in the dynamic field and would like to make a career out of it.</p>
             <p>In this page, you can find information about my skillset and see some of the projects that I have made in the past.</p>
             <div className='flex flex-wrap justify-center items-center flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row'>
@@ -186,7 +187,7 @@ function GithubDisplay() {
 
 function AboutPage() {
   return (
-    <section id='about' className='w-full h-full flex flex-col flex-shrink-0 items-left justify-center'>
+    <section id='about' className='w-full h-full flex flex-col flex-shrink-0 items-left justify-center overflow-auto'>
       <h1 className='font-bold mx-3 md:text-xl lg:text-2xl xl:text-3xl'>Education:</h1>
       <div className='mx-3 md:text-lg lg:text-xl xl:text-2xl '>I am currently studying in Riga State Gymnasium No. 1 with a focus on Programming. I have made many
         <a href='#projects' className='mx-2' style={{borderBottom:"1px solid black"}}>PROJECTS</a>
