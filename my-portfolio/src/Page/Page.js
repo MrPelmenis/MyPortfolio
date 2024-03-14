@@ -15,6 +15,9 @@ import javaLogo from "../img/javaLogo.jpg";
 import csharpLogo from "../img/csharpLogo.png";
 import cPlusPlusLogo from "../img/c++Logo.png";
 import tailwindLogo from "../img/tailwindLogo.png";
+import linuxLogo from "../img/linuxLogo.png";
+import typeScriptLogo from "../img/typeScript.png";
+import githubLogo from "../img/githubLogo.png";
 
 
 
@@ -59,19 +62,19 @@ function Page() {
 
 
 function HomePage() {
- 
   return (
-    <section id='home' className='w-full h-full flex overflow-hidden flex-shrink-0 flex-col items-center sm:flex-col md:flex-col lg:flex-row xl:flex-row'>
-      <img className='mx-6 h-48 md:h-auto lg:h-auto xl:h-auto shake' src={homeImage} alt="Home Image" />
-      <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full  overflow-y-auto flex flex-col justify-center items-center' style={{paddingBottom:10}}>
-        Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.
-        <div className='flex flex-wrap justify-center items-center flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row'>
-          <ContactMe></ContactMe>
-          <GithubDisplay></GithubDisplay>  
-          <Socials></Socials>
+    <section id='home' className='w-full h-full flex overflow-scroll flex-shrink-0 flex-col items-center sm:flex-col md:flex-col lg:flex-row xl:flex-row'>
+        <img className='mx-6 h-auto  lg:h-auto xl:h-auto shake' src={homeImage} alt="Home Image" />
+        <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full overflow-y-auto flex flex-col justify-center items-center' style={{paddingBottom:60, minHeight: '70%'}}>
+            <p>Hello!<br/> I'm Normunds, an IT enthusiast. I've been studying programming for the past 6-7 years and have created many projects along the way. I am continuously sharpening my skills and knowledge to excel in the dynamic field and would like to make a career out of it.</p>
+            <p>In this page, you can find information about my skillset and see some of the projects that I have made in the past.</p>
+            <div className='flex flex-wrap justify-center items-center flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row'>
+                <ContactMe></ContactMe>
+                <GithubDisplay></GithubDisplay>  
+                <Socials></Socials>
+            </div>
         </div>
-      </div>
-  </section>
+    </section>
   );
 }
 
@@ -185,14 +188,18 @@ function AboutPage() {
   return (
     <section id='about' className='w-full h-full flex flex-col flex-shrink-0 items-left justify-center'>
       <h1 className='font-bold mx-3 md:text-xl lg:text-2xl xl:text-3xl'>Education:</h1>
-      <div className='mx-3 md:text-lg lg:text-xl xl:text-2xl '>Mind what no by kept. Celebrated no he decisively thoroughly. Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put far daughter.</div>
+      <div className='mx-3 md:text-lg lg:text-xl xl:text-2xl '>I am currently studying in Riga State Gymnasium No. 1 with a focus on Programming. I have made many
+        <a href='#projects' className='mx-2' style={{borderBottom:"1px solid black"}}>PROJECTS</a>
+        to enhance my IT knowledge, some of them being collaborative.
+       </div>
       <h1 className='font-bold mx-3 md:text-xl lg:text-2xl xl:text-3xl mt-5'>IT Knowledge:</h1>
-      <div className='mx-3 md:text-lg lg:text-xl xl:text-2xl mb-1'>Fujak es ahujennais it fujaks</div>
+      <div className='mx-3 md:text-lg lg:text-xl xl:text-2xl mb-1'>These are most of the programming languages and technologies I'm skilled in:</div>
       <div className='turuWidgetus mb-20'>
         <LanguageShowcase img={jsLogo} text="Js"></LanguageShowcase>
         <LanguageShowcase img={htmlLogo} text="Html"></LanguageShowcase>
         <LanguageShowcase img={cssLogo} text="Css"></LanguageShowcase>
         <LanguageShowcase img={reactLogo} text="React"></LanguageShowcase>
+        <LanguageShowcase img={typeScriptLogo} text="Ts"></LanguageShowcase>
         <LanguageShowcase img={tailwindLogo} text="Tailwind"></LanguageShowcase>
         <br/>
         <LanguageShowcase img={nodeJsLogo} text="Node Js"></LanguageShowcase>
@@ -202,6 +209,9 @@ function AboutPage() {
         <LanguageShowcase img={csharpLogo} text="C#"></LanguageShowcase>
         <LanguageShowcase img={cPlusPlusLogo} text="C++"></LanguageShowcase>
         <LanguageShowcase img={javaLogo} text="Java"></LanguageShowcase>
+        <LanguageShowcase img={linuxLogo} text="Linux"></LanguageShowcase>
+        <br/>
+        <LanguageShowcase img={githubLogo} text="Github"></LanguageShowcase>
       </div>
    </section>
   );
@@ -212,22 +222,22 @@ function ProjectsPage(){
     <section id='projects' className='w-full h-full flex-shrink-0 flex flex-col' >
       
      
-      <section className='flex flex-wrap overflow-y-auto h-full justify-center mt-10' style={{paddingBottom:"60px"}}>
+      <section className='flex flex-wrap overflow-y-auto h-full justify-center ' style={{paddingBottom:"60px"}}>
       <div className='w-full'> <h1 className='font-bold mt-5 ml-5 md:text-xl lg:text-2xl xl:text-3xl'>My Personal Live Projects:</h1></div>
-        <ProjectShowcase href={"https://naggers.sytes.net/"} img={naggersImg} title={"Full Stack Website"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase href={"https://thetankgame.azurewebsites.net/"} img={tankGame} title={"Online Multiplayer Tank Game"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase href={"https://purse.blob.core.windows.net/epic-killing-game/index.html"} img={epicKillingGame} title={"Crimsonland Alternative"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase  href={"https://nomunakaste.blob.core.windows.net/bitmachine/index.html"} img={beatMakerImg} title={"Beat Maker Web"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase href={"https://nomunakaste.blob.core.windows.net/asteroidgame/start.html"} img={asteroidGameImg} title={"Retro Asteroid Game"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase href={"https://naggers.sytes.net/"} img={naggersImg} title={"Full Stack Twitter Clone"} text={"Dive into my project, a full-stack website crafted wit mostly React, PHP, and MySQL. It's Live, Check it out!"}></ProjectShowcase>
+        <ProjectShowcase href={"https://thetankgame.azurewebsites.net/"} img={tankGame} title={"Online Multiplayer Tank Game"} text={"Collaborative project with my brother, real-time tank battles. Experience shooting in a live multiplayer action."}></ProjectShowcase>
+        <ProjectShowcase href={"https://purse.blob.core.windows.net/epic-killing-game/index.html"} img={epicKillingGame} title={"Crimsonland Alternative"} text={"With mobile controls and infinite world generation. Go shoot some monsters!"}></ProjectShowcase>
+        <ProjectShowcase  href={"https://nomunakaste.blob.core.windows.net/bitmachine/index.html"} img={beatMakerImg} title={"Web Beat Maker"} text={"A browser-based beat-making tool to make simple beats online"}></ProjectShowcase>
+        <ProjectShowcase href={"https://nomunakaste.blob.core.windows.net/asteroidgame/start.html"} img={asteroidGameImg} title={"Retro Asteroid Game"} text={"Navigate through space with randomly generated asteroid fields."}></ProjectShowcase>
       
       <div className='w-full'> <h1 className='font-bold mt-5 ml-5 md:text-xl lg:text-2xl xl:text-3xl'>Others:</h1></div>
-        <ProjectShowcase img={game2048} title={"2048 Alternative"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase img={gameofLife} title={"Conway's Game Of Life Remake"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase img={imgtoTxt} title={"Image To Text Converter"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase img={threeDterrain} title={"3D Terrain Generation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase img={maze} title={"3D Maze Generation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase img={boidsImg} title={"3D Boids Simulation"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
-        <ProjectShowcase img={bird} title={"Flappy Bird Remake"} text={"Nu kko jau es te uztaisiju, bija kinda gruti bet beigaas sagaaja viss kaa gribeju"}></ProjectShowcase>
+        <ProjectShowcase img={game2048} title={"2048 Alternative"} text={"I just made the same game but better and using the power of 3"}></ProjectShowcase>
+        <ProjectShowcase img={gameofLife} title={"Conway's Game Of Life Remake"} text={"A recreation of the popular game. It's nothing special just a weekend project"}></ProjectShowcase>
+        <ProjectShowcase img={imgtoTxt} title={"Image To Text Converter"} text={"Converts Image files to images to basic english characters"}></ProjectShowcase>
+        <ProjectShowcase img={threeDterrain} title={"3D Terrain Generation"} text={"My biggest three.js project. I made a somewhat realistic terrain for fun."}></ProjectShowcase>
+        <ProjectShowcase img={maze} title={"3D Maze Generation"} text={"Learned three.js and maze-generation algorithms"}></ProjectShowcase>
+        <ProjectShowcase img={boidsImg} title={"3D Boids Simulation"} text={"I tried simulatig Boid movement in 3D, altough it isn't perfect it works."}></ProjectShowcase>
+        <ProjectShowcase img={bird} title={"Flappy Bird Remake"} text={"This is just... flappy bird"}></ProjectShowcase>
       
       <div className='w-full' style={{height:50}}></div>
       </section>

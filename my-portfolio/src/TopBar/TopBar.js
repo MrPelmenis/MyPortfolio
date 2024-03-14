@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import "./TopBar.css";
 
 function TopBar() {
-
     const [toggledButtons, setToggledButtons] = useState({home:false, about:false, projects:false});
 
     const [topName, setTopName] = useState('');
-    const nameineed = 'Noormunds Malnačs';
+    const nameineed = 'Noormunds Malnačs';  
     let i = 0;
   
     const writeName = () => {
@@ -56,8 +55,11 @@ function TopBar() {
   useEffect(() => {
     writeName();
       const handleResize = () => {
-          const currentHash = window.location.hash;
-          const element = document.querySelector(currentHash);
+          let currentHash = window.location.hash;
+          if (currentHash == ""){
+            currentHash = "home";
+          }
+          let element = document.querySelector(currentHash);
           if (element) {
               element.scrollIntoView({ behavior: "auto" });
           }
