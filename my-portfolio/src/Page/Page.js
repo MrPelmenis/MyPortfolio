@@ -64,9 +64,9 @@ function Page() {
 function HomePage() {
   return (
     <section id='home' className='w-full h-full flex flex-shrink-0 flex-col overflow-y-scroll items-start sm:flex-col md:flex-col lg:flex-row xl:flex-row'>
-         <div className='mx-6 h-full flex items-center'>
-            <img className='h-auto shake' src={homeImage} alt="Home Image"/>
-        </div>
+       <span className='h-auto lg:h-full xl:h-full flex flex-col items-center justify-center mx-3' style={{minWidth: 300}}>
+        <img className='h-auto shake mx-3' src={homeImage} alt="Home Image"/>
+      </span>
         <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full overflow-visible flex flex-col items-center mt-5 lg:justify-center xl:justify-center' style={{minHeight: "100%", paddingBottom: "60px"}}>
             <p className="mt-0">Hello!<br/> I'm Normunds, an IT enthusiast. I've been studying programming for the past 6-7 years and have created many projects along the way. I am continuously sharpening my skills and knowledge to excel in the dynamic field and would like to make a career out of it.</p>
             <p className="mt-0">In this page, you can find information about my skillset and see some of the projects that I have made in the past.</p>
