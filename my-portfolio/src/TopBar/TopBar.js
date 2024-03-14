@@ -80,7 +80,6 @@ function TopBar() {
       <div className='h-20 w-full rounded-lg flex justify-between items-center bg-my-light' >
           <span className='mx-6 md:mx-3 lg:mg-6 xl:mx-6 text-2xl md:text-2xl lg:text-3xl xl:text-4xl coolFont'>{topName}</span>
           <NavigatorButtons></NavigatorButtons>
-          <div className='hidden md:block text-lg md:text-lg lg:text-xl xl:text-2xl'>Nu kkas seit arii var but</div>
       </div>
     );
 }
