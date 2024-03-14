@@ -187,7 +187,7 @@ function GithubDisplay() {
 
 function AboutPage() {
   return (
-    <section id='about' className='w-full h-full flex flex-col flex-shrink-0 items-left justify-center overflow-auto'>
+    <section id='about' className='w-full h-full flex flex-col flex-shrink-0 items-left justify-center overflow-auto' style={{minHeight: "100%"}}>
       <h1 className='font-bold mx-3 md:text-xl lg:text-2xl xl:text-3xl'>Education:</h1>
       <div className='mx-3 md:text-lg lg:text-xl xl:text-2xl '>I am currently studying in Riga State Gymnasium No. 1 with a focus on Programming. I have made many
         <a href='#projects' className='mx-2' style={{borderBottom:"1px solid black"}}>PROJECTS</a>
@@ -221,7 +221,7 @@ function AboutPage() {
 function ProjectsPage(){
   return (
     <section id='projects' className='w-full h-full flex-shrink-0 flex flex-col' >
-      <section className='flex flex-wrap overflow-y-auto h-full justify-center ' style={{paddingBottom:"60px"}}>
+      <section className='flex flex-wrap overflow-y-auto h-full justify-center ' style={{paddingBottom:"60px", minHeight: "100%"}}>
       <div className='w-full'> <h1 className='font-bold mt-5 ml-5 md:text-xl lg:text-2xl xl:text-3xl'>My Personal Live Projects:</h1></div>
         <ProjectShowcase href={"https://naggers.sytes.net/"} img={naggersImg} title={"Full Stack Twitter Clone"} text={"Dive into my project, a full-stack website crafted wit mostly React, PHP, and MySQL. It's Live, Check it out!"}></ProjectShowcase>
         <ProjectShowcase href={"https://thetankgame.azurewebsites.net/"} img={tankGame} title={"Online Multiplayer Tank Game"} text={"Collaborative project with my brother, real-time tank battles. Experience shooting in a live multiplayer action."}></ProjectShowcase>
