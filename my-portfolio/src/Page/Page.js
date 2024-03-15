@@ -2,7 +2,7 @@ import { useEffect, useState, useRef  } from 'react';
 import './Page.css';
 
 
-import homeImage from "../img/image.png";
+import homeImage from "../img/manaBIlde.png";
 
 import phpLogo from "../img/phpLogo.png";
 import jsLogo from "../img/jsLogo.png";
@@ -21,6 +21,7 @@ import githubLogo from "../img/githubLogo.png";
 
 
 
+
 import boidsImg from "../img/boids.png";
 import naggersImg from "../img/naggers.png";
 import beatMakerImg from "../img/beatMaker.png";
@@ -33,6 +34,7 @@ import gameofLife from "../img/game of life.png";
 import bird from "../img/bird.png";
 import imgtoTxt from "../img/imgtotext.png";
 import maze from "../img/3dmaze.png";
+import arduino from "../img/arduino.png";
 
 import { MdEmail } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
@@ -68,12 +70,12 @@ function HomePage() {
         <img className='h-auto shake mx-3' src={homeImage} alt="Home Image"/>
       </span>
         <div className='mx-6 md:text-lg lg:text-xl xl:text-2xl max-w-full overflow-visible flex flex-col items-center mt-5 lg:justify-center xl:justify-center' style={{minHeight: "100%", paddingBottom: "60px"}}>
-            <p className="mt-0">Hello!<br/> I'm Normunds, an IT enthusiast. I've been studying programming for the past 6-7 years and have created many projects along the way. I am continuously sharpening my skills and knowledge to excel in the dynamic field and would like to make a career out of it.</p>
+            <p className="mt-0">Welcome!<br/> I'm Normunds, an IT enthusiast. I've been studying programming for the past 6-7 years and have created many projects along the way. I am continuously sharpening my skills and knowledge to excel in the dynamic field of IT and would like to make a successful career out of it.</p>
             <p className="mt-0">In this page, you can find information about my skillset and see some of the projects that I have made in the past.</p>
-            <div className='flex flex-wrap justify-center items-center flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row'>
-                <ContactMe></ContactMe>
-                <GithubDisplay></GithubDisplay>  
-                <Socials></Socials>
+            <div className='flex flex-wrap justify-center items-center flex-col'>
+              <ContactMe></ContactMe>
+              <GithubDisplay></GithubDisplay>  
+              <Socials></Socials>
             </div>
         </div>
     </section>
@@ -231,11 +233,12 @@ function ProjectsPage(){
         <ProjectShowcase href={"https://nomunakaste.blob.core.windows.net/asteroidgame/start.html"} img={asteroidGameImg} title={"Retro Asteroid Game"} text={"Navigate through space with randomly generated asteroid fields."}></ProjectShowcase>
       
       <div className='w-full'> <h1 className='font-bold mt-5 ml-5 md:text-xl lg:text-2xl xl:text-3xl'>Others:</h1></div>
-        <ProjectShowcase img={game2048} title={"2048 Alternative"} text={"I just made the same game but better and using the power of 3"}></ProjectShowcase>
+      <ProjectShowcase img={threeDterrain} title={"3D Terrain Generation"} text={"My biggest three.js project. I made a somewhat realistic terrain for fun."}></ProjectShowcase>
+        <ProjectShowcase img={maze} title={"3D Maze Generation"} text={"Learned three.js and maze-generation algorithms"}></ProjectShowcase>
+        <ProjectShowcase img={arduino} title={"Robotics"} text={"Using Arduino and ESP boards I have made a radar scanner, an automatic doorlock and other small builds"}></ProjectShowcase>
         <ProjectShowcase img={gameofLife} title={"Conway's Game Of Life Remake"} text={"A recreation of the popular game. It's nothing special just a weekend project"}></ProjectShowcase>
         <ProjectShowcase img={imgtoTxt} title={"Image To Text Converter"} text={"Converts Image files to images to basic english characters"}></ProjectShowcase>
-        <ProjectShowcase img={threeDterrain} title={"3D Terrain Generation"} text={"My biggest three.js project. I made a somewhat realistic terrain for fun."}></ProjectShowcase>
-        <ProjectShowcase img={maze} title={"3D Maze Generation"} text={"Learned three.js and maze-generation algorithms"}></ProjectShowcase>
+        <ProjectShowcase img={game2048} title={"2048 Alternative"} text={"I just made the same game but better and using the power of 3"}></ProjectShowcase>
         <ProjectShowcase img={boidsImg} title={"3D Boids Simulation"} text={"I tried simulatig Boid movement in 3D, altough it isn't perfect it works."}></ProjectShowcase>
         <ProjectShowcase img={bird} title={"Flappy Bird Remake"} text={"This is just... flappy bird"}></ProjectShowcase>
       
